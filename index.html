@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ja">
+	<head>
+		<script type="text/javascript" src="script.js"></script>
+		<link rel="stylesheet" href="style.css" />
+		<meta charset="utf-8" />
+		<title></title>
+	</head>
+	<body>
+		<div>
+			<form id="musicInfo">
+				<div>
+					<select id="liveType">
+						<option id="liveType_wide" value="wide">WIDE(通常)</option>
+						<option id="liveType_grand" value="grand" selected>GRAND</option>
+					</select>
+					曲の長さ(秒)：<input id="musicLength" type="number" value="130" style="width:50px;" />
+				</div>
+			</form>
+			<form id="selectSkill">
+				<div>
+					<select id="skillList_name">
+						<option value="sk_name_default">スキルを選択</option>
+						<option value="sk_name_boost">スキルブースト系</option>
+						<option value="sk_name_synergy">トリコロールシナジー</option>
+						<option value="sk_name_prfcteSpt">パーフェクトサポート</option>
+						<option value="sk_name_dmgGrd">ダメージガード</option>
+					</select>
+					<input id="skillList_inTime" type="number" value="7" style="width:50px;" />
+					<select id="skillList_acTime">
+						<option value="sk_acTime_default">発動時間を選択</option>
+						<option value="sk_acTime_3">一瞬　　(3.0秒)</option>
+						<option value="sk_acTime_4_5">わずか　(4.5秒)</option>
+						<option value="sk_acTime_6">少し　　(6.0秒)</option>
+						<option value="sk_acTime_7_5">しばらく(7.5秒)</option>
+						<option value="sk_acTime_9">かなり　(9.0秒)</option>
+					</select>
+					<select id="skillList_unit">
+						<option value="sk_unit_default">ユニット</option>
+						<option value="sk_unit_A">A</option>
+						<option value="sk_unit_B">B</option>
+						<option value="sk_unit_C">C</option>
+					</select>
+					<input id="addSkill" type="button" value="＋" />
+				</div>
+			</form>
+			<div>
+				<table id="skillTable">
+					<tbody id="skillTableBody">
+						<tr>
+							<th style="width:200px">スキル名</th>
+							<th style="width:80px">発動間隔</th>
+							<th style="width:150px">発動時間</th>
+							<th id="grand_unit" style="width:80px">ユニット</th>
+							<th style="width:30px"></th>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+
+		</div>
+		<canvas id="canvas"></canvas>
+	</body>
+</html>
