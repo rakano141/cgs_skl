@@ -1,4 +1,4 @@
-const BLOCK_WIDTH = 15;
+const BLOCK_WIDTH = 10;
 const BLOCK_HEIGHT = 15;
 const INTERVAL_PIXEL = 1;
 const d = document;
