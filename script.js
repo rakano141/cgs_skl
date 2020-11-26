@@ -130,7 +130,7 @@ d.addEventListener("DOMContentLoaded", (event)=>{
 			ctx.fillRect(t*BLOCK_WIDTH, 0, BLOCK_WIDTH, BLOCK_HEIGHT);
 			ctx.font = "10px sans-serif";
 			ctx.fillStyle = "white";
-			ctx.fillText(t%10, (t+0.3)*BLOCK_WIDTH, (0.8)*BLOCK_HEIGHT);
+			ctx.fillText(t%10, (t+0.2)*BLOCK_WIDTH, (0.8)*BLOCK_HEIGHT);
 		}//ヘッド
 		ontentMargin++;
 		let prfcteSpt = [];
