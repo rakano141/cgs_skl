@@ -177,14 +177,14 @@ d.addEventListener("DOMContentLoaded", (event)=>{
 				ctx.strokeRect(t*BLOCK_WIDTH,(i+ontentMargin)*BLOCK_HEIGHT, BLOCK_WIDTH, BLOCK_HEIGHT);
 			}
 		}
-		arrayDraw(boost, ontentMargin, "gold");
+		arrayDraw(boost, ontentMargin, "gold", "display_boost");
 		ontentMargin++;
-		arrayDraw(prfcteSpt, ontentMargin, "green");
+		arrayDraw(prfcteSpt, ontentMargin, "green", "display_pftsp");
 		ontentMargin++;
 		arrayDraw(dmgGrd, ontentMargin, "blue");
 		ontentMargin++;
 	};
-	const arrayDraw = (ary, margin, color = "lightgreen")=>{
+	const arrayDraw = (ary, margin, color = "lightgreen", displayId = -1)=>{
 		let totalSec = 0;
 		let height = (skills.length+margin)*BLOCK_HEIGHT+INTERVAL_PIXEL;
 		for(let t = 0;t <= MUSIC_TIME;t++){
@@ -207,6 +207,7 @@ d.addEventListener("DOMContentLoaded", (event)=>{
 			ctx.strokeRect(t*BLOCK_WIDTH, height, BLOCK_WIDTH, BLOCK_HEIGHT);
 		}
 		console.log("TotalSec:\t"+totalSec);
+		if(displayId)d.getElementById(displayId).value = totalSec;	
 	};
 	const changeLiveType = (type)=>{
 		console.log(type);
