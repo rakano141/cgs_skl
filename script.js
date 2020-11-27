@@ -4,7 +4,7 @@ const INTERVAL_PIXEL = 1;
 const d = document;
 
 d.addEventListener("DOMContentLoaded", (event)=>{
-	console.log("Last Update	:11/27 12:24");
+	console.log("Last Update	:11/27 12:26");
 	let MUSIC_TIME = 130;
 	let LIVETYPE = "";
 	let MARGINCONTENTS = 0;
@@ -207,7 +207,6 @@ d.addEventListener("DOMContentLoaded", (event)=>{
 		}
 		arrayDraw(tmpAry, ontentMargin, "skyblue");
 		ontentMargin++;
-		d.getElementById("display_pefec").value = totalSec;
 	};
 	const arrayDraw = (ary, margin, color = "lightgreen", displayId)=>{
 		let totalSec = 0;
