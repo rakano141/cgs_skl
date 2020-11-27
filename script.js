@@ -4,7 +4,7 @@ const INTERVAL_PIXEL = 1;
 const d = document;
 
 d.addEventListener("DOMContentLoaded", (event)=>{
-	console.log("update:11/27_10:52");
+	console.log("update	:	11/27 11:08");
 	let MUSIC_TIME = 130;
 	let LIVETYPE = "";
 	let MARGINCONTENTS = 0;
@@ -194,7 +194,7 @@ d.addEventListener("DOMContentLoaded", (event)=>{
 		}
 		d.getElementById("display_pefec").value = totalSec;
 	};
-	const arrayDraw = (ary, margin, color = "lightgreen", displayId = -1)=>{
+	const arrayDraw = (ary, margin, color = "lightgreen", displayId)=>{
 		let totalSec = 0;
 		let height = (skills.length+margin)*BLOCK_HEIGHT+INTERVAL_PIXEL;
 		for(let t = 0;t <= MUSIC_TIME;t++){
