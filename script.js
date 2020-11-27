@@ -4,6 +4,7 @@ const INTERVAL_PIXEL = 1;
 const d = document;
 
 d.addEventListener("DOMContentLoaded", (event)=>{
+	console.log("update:11/27_10:50");
 	let MUSIC_TIME = 130;
 	let LIVETYPE = "";
 	let MARGINCONTENTS = 0;
@@ -183,6 +184,15 @@ d.addEventListener("DOMContentLoaded", (event)=>{
 		ontentMargin++;
 		arrayDraw(dmgGrd, ontentMargin, "blue");
 		ontentMargin++;
+		let totalSec = 0;
+		for(let t = 0;t <= MUSIC_TIME;t++){
+			if(boost[t]==1&&prfcteSpt[t]==1){
+				totalSec ++;
+			}else if((boost[t]==0.5&&prfcteSpt[t]==1)||(boost[t]==1&&prfcteSpt[t]==0.5)){
+				totalSec += 0.5;
+			}
+		}
+		d.getElementById("display_pefec").value = totalSec;
 	};
 	const arrayDraw = (ary, margin, color = "lightgreen", displayId = -1)=>{
 		let totalSec = 0;
