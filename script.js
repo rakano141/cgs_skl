@@ -4,7 +4,7 @@ const INTERVAL_PIXEL = 1;
 const d = document;
 
 d.addEventListener("DOMContentLoaded", (event)=>{
-	console.log("update:11/27_10:50");
+	console.log("update:11/27_10:52");
 	let MUSIC_TIME = 130;
 	let LIVETYPE = "";
 	let MARGINCONTENTS = 0;
@@ -217,6 +217,7 @@ d.addEventListener("DOMContentLoaded", (event)=>{
 			ctx.strokeRect(t*BLOCK_WIDTH, height, BLOCK_WIDTH, BLOCK_HEIGHT);
 		}
 		console.log("TotalSec:\t"+totalSec);
+		console.log(displayId);
 		if(displayId)d.getElementById(displayId).value = totalSec;	
 	};
 	const changeLiveType = (type)=>{
