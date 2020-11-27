@@ -4,7 +4,7 @@ const INTERVAL_PIXEL = 1;
 const d = document;
 
 d.addEventListener("DOMContentLoaded", (event)=>{
-	console.log("update	:	11/27 11:08");
+	console.log("Last Update	:11/27 12:24");
 	let MUSIC_TIME = 130;
 	let LIVETYPE = "";
 	let MARGINCONTENTS = 0;
@@ -184,14 +184,29 @@ d.addEventListener("DOMContentLoaded", (event)=>{
 		ontentMargin++;
 		arrayDraw(dmgGrd, ontentMargin, "blue");
 		ontentMargin++;
-		let totalSec = 0;
+		let tmpAry = [];
 		for(let t = 0;t <= MUSIC_TIME;t++){
 			if(boost[t]==1&&prfcteSpt[t]==1){
-				totalSec ++;
+				tmpAry[t] = 1;
 			}else if((boost[t]==0.5&&prfcteSpt[t]==1)||(boost[t]==1&&prfcteSpt[t]==0.5)){
-				totalSec += 0.5;
+				tmpAry[t] = 0.5;
+			}else{
+				tmpAry[t] = 0;
 			}
 		}
+		arrayDraw(tmpAry, ontentMargin, "gold", "display_pefec");
+		ontentMargin++;
+		for(let t = 0;t <= MUSIC_TIME;t++){
+			if(dmgGrd[t]==1||tmpAry[t]==1){
+				tmpAry[t] = 1;
+			}else if(dmgGrd[t]==0.5||tmpAry[t]==0.5){
+				tmpAry[t] = 0.5;
+			}else{
+				tmpAry[t] = 0;
+			}
+		}
+		arrayDraw(tmpAry, ontentMargin, "skyblue");
+		ontentMargin++;
 		d.getElementById("display_pefec").value = totalSec;
 	};
 	const arrayDraw = (ary, margin, color = "lightgreen", displayId)=>{
